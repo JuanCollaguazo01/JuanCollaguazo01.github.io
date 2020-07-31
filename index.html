@@ -1,1 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="">
 
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <meta name="theme-color" content="#fafafa">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+
+<body >
+<audio class="audio" loop>
+  <source src="audio/fondo.ogg" type="audio/ogg">
+</audio>
+
+  <!-- Add your site or application content here -->
+  <div id="Cabecera" >
+    <h1 class="text-white" >Puedes llegar a la meta sin sudar</h1>
+    <h4 class="text-white" >Grupo 3</h4>
+  </div>
+
+  <div id="Cuerpo" >
+
+    <div id="Info-Jugador" >
+      <div class="row">
+        <!--Imagen Jugador 1  -->
+        <div class="col-1">
+          <img class="Image" src="img/avatar1.jpg" >
+        </div>
+        <div class="col-2" id="Texto-Jugador1" >
+          <h3 class="text-white">Jugador 1</h3>
+          <h2 id="status" style="clear:left; font-size: 15px;" class="text-white"></h2>
+        </div>
+        <!--Button Jugador 1  -->
+        <div class="col-2">
+          <button onclick="rollDice()" id="BtnJug1" type="button" class="btn btn-primary text-dark border-dark float-right">Lanzar J1</button>
+        </div>
+        <!--Dado -->
+        <div class="col-2 center-block"  style="display: flex">
+          <div id="die1" class="dice">0</div>
+          <button id="Comprobacion">Listo</button>
+          <div id="die2" class="dice">0</div>
+           </div>
+        <!--Button Jugador 2  -->
+        <div class="col-2">
+          <button onclick="rollDice2()"  id="BtnJug2" type="button" class="btn btn-primary text-dark border-dark">Lanzar J2</button>
+        </div>
+
+        <div class="col-2" id="Texto-Jugador2">
+          <h3 class="text-white">Jugador 2</h3>
+          <h2 id="status2" style="clear:left; font-size: 15px;" class="text-white"></h2>
+        </div>
+        <!--Imagen Jugador 2  -->
+        <div class="col-1">
+          <img class="Image2" src="img/avatar2.png" >
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="Juego" >
+      <div class="row">
+        <div class="col-10">
+            <div class="pd-2 pt-2  ">
+
+              <h3 class="pl-3">Jugador 1</h3>
+              <p class="pb-0 pl-3 mb-0 ">Inicio</p>
+              <!-- Camino 1 -->
+              <div class="Mapa" style="padding: 10px 10px 10px 10px">
+                <div class="Cuadrado ColorIni_Fin">
+                  <div class='ficha text-white text-center'></div>
+                </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+
+
+              </div>
+              <div class="Mapa" style="padding: 10px 10px 10px 10px">
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado"> </div>
+                <div CLASS="Cuadrado ColorIni_Fin"> </div>
+              </div>
+
+              <p class="text-right pr-4 pb-0 mb-0">Fin</p>
+              <!--Inicio de camino Jugador 2 -->
+
+
+              <h3 class="pl-3 pt-0">Jugador 2</h3>
+              <p class="pb-0 pl-3 mb-0 ">Inicio</p>
+              <!-- Camino 2 -->
+              <div class="Mapa2" style="padding: 10px 10px 10px 10px">
+                <div CLASS="Cuadrado2 ColorIni_Fin">
+                  <div class='ficha2 text-white text-center'></div>
+                </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2 "> </div>
+              </div>
+
+              <div class="Mapa2" style="padding: 10px 10px 10px 10px">
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+                <div CLASS="Cuadrado2"> </div>
+
+                <div CLASS="Cuadrado2 ColorIni_Fin"> </div>
+
+              </div>
+              <p class="text-right pr-4">Fin</p>
+            </div>
+
+        </div>
+
+        <div class="col-2 pt-5">
+          <div>
+            <!-- Info  -->
+            <h2 style="font-size: 20px;">Retos</h2>
+            <ol>
+              <li>5 sentadillas</li>
+              <li>5 saltos</li>
+              <li>10 flexiones</li>
+              <li>10 abdominales</li>
+              <li>15 sentadillas</li>
+              <li>15 tijeras</li>
+              <li>20 flexiones</li>
+              <li>5 diamantes </li>
+              <li>Descanso </li>
+              <li>Gana 5 flexiones </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<div id="PanelInfo">
+  <h1><strong>Bienvenidos jugadores</strong></h1>
+  <p>Antes de empezar el juego deben saber las reglas</p>
+  <ol>
+    <li>Cada jugador tiene un turno para lanzar el dado</li>
+    <li>Cuando una ficha se mueve aparecera en ella un numero, el cual indica el reto que deben cumplir</li>
+    <li>El reto debe ser llevado a cabo de forma inmediata</li>
+    <li>El ganador podra penalizar al perdedor</li>
+  </ol>
+  <p><strong>¿Aceptas el reto?</strong> </p>
+
+  <div class="row">
+    <div class="col-12 text-center" >
+      <button  onclick="acepta();" type="button" class="btn btn-primary text-dark border-dark" >Aceptar</button>
+      <button   onclick="noacepta();" type="button" class=" btn btn-primary text-dark border-dark">Cancelar</button>
+    </div>
+  </div>
+</div>
+  <div id="Gano1" class="text-center">
+    <h2><strong>FELICIDADES JUGADOR 1 HAS GANADO EL JUEGO </strong></h2>
+    <p>Es hora del castigo</p>
+    <div class="row">
+      <div class="col-12 text-center" >
+        <button  onclick="reiniciar();" type="button" class="btn btn-primary text-dark border-dark" >Jugar de nuevo</button>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="Gano2" class="text-center">
+    <h2><strong>FELICIDADES JUGADOR 2 HAS GANADO EL JUEGO </strong></h2>
+    <p>Es hora del castigo</p>
+    <div class="row">
+      <div class="col-12 text-center" >
+        <button  onclick="reiniciar();" type="button" class="btn btn-primary text-dark border-dark" >Jugar de nuevo</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
